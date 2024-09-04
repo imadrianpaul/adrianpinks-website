@@ -1,7 +1,7 @@
 import React from "react";
 import './Testimonials.css';
 
-import { Pagination } from 'swiper';
+import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -25,7 +25,7 @@ const Testimonials = () => {
     ];
 
 
-    /*return (
+    return (
         <section className="testimonials container section">
 
             <h2 className="section__title">Testimonials</h2>
@@ -43,7 +43,7 @@ const Testimonials = () => {
                             <div className="thumb">
 
                                 
-                            <img src={image} alt="" />           
+                            {/* <img src={image} alt="" />            */}
                             </div>
                             <h3 className="testimonial__title">{title}</h3>
                             <span className="subtitle">{subtitle}</span>
@@ -53,7 +53,7 @@ const Testimonials = () => {
                 })}
                 </Swiper>
         </section>
-    )*/
+    )
 };
 
 export default Testimonials
