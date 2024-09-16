@@ -3,13 +3,14 @@ aside {
     left: 0;
     top: 0;
     background-color: var(--body-color);
-    border-right: 1px solid var (--border-color);
-    padding: 2.5rem;
+    border-right: 1px solid var(--border-color);
+    padding: 2rem;
     width: 110px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     z-index: 11;
     transition: 0.3s;
 }
@@ -17,19 +18,48 @@ aside {
 .nav__list {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    align-items: flex-end;
+    row-gap: 2rem;
+}
+
+.nav_logo img {
+    border: 2px solid var(--main-color); /* Adds a border to the image */
+    border-radius: 2.5px; /* Optional: Makes the image circular */
+    width: 80px; /* Set the desired width */
+    height: 45px; /* Set the desired height */
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+    transition: 0.3s; /* Optional: Adds a smooth transition */
+}
+
+.nav_logo img:hover {
+    border-color: var(--title-color); /* Changes border color on hover */
 }
 
 .nav__link {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--title-color);
     font-weight: var(--font-bold);
-    transition: 0.3s;
+    transition: 0.3s; 
+}
+
+.nav__link:hover {
+    color: var(--main-color);
+}
+
+.footer__button {
+    background-color: transparent;
+}
+
+.copyright {
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+    transform: rotate(-180deg);
+    writing-mode: vertical-rl;
 }
 
 .nav__toggle {
     position: fixed;
-    top: 1.25rem;
+    top: 1rem;
     left: 1.875rem;
     cursor: pointer;
     height: 40px;
@@ -44,16 +74,17 @@ aside {
     font-size: 1rem;
 }
 
-[data-theme="dark"] .nav_toggxle {
+[data-theme="dark"] .nav__toggle {
     border: 1px solid var(--title-color);
+
 }
 
-[data-theme="dark"] .nav__toggle >svg {
+[data-theme="dark"] .nav__toggle > svg {
     color: var(--title-color);
 }
 
 @media screen and (max-width: 1024px) {
-    .aside {
+    aside {
         left: -110px;
     }
 

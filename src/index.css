@@ -1,74 +1,67 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
 /* Google Fonts */
 
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 :root {
 
   /* Colors */
-
-  --first-color: hsl(353, 100%, 65%);
-  --title-color: hsl(244, 100%, 26%);
-  --text-color: hsl(244,16%, 43%);
-  --body-color: hsl(258, 60%, 97%);
-  --container-color: #fff;
-  --border-color: rgba(0, 0, 0, 0.05);
+  --main-color: hsl(244, 46%, 69%);
+  --title-color: hsl(0, 0%, 10%);
+  --text-color: hsl(0, 0%, 10%);
+  --body-color: hsl(0, 0%, 97%);
+  --container-color: #eeeeee;
+  --border-color: rgba(0, 0, 0, 0.25);
+  --gradient-color: linear-gradient(180deg, rgb(206, 206, 206) 0%, rgb(207, 207, 207) 52%, rgb(138, 138, 138) 100%);
+  --background-color: linear-gradient(135deg, #eeeeee, #c9c9c9);
+  --background-attachment: fixed;
+  --background-size: cover;
 
   /* Font and Typhography */
-
-  --body-font: "Lora", sans-serif;
-  --h1-font-size: 24px;
-  --h2-font-size: 20px;
+  --body-font: "Space Grotesk", sans-serif, serif;
+  --body-font2: "Chivo Mono", serif;
+  --code-font: "Source Code Pro", monospace;
+  --h1-font-size: 56px;
+  --h2-font-size: 24px;
   --h3-font-size: 16px;
   --normal-font-size: 14px;
   --smaller-font-size: 13px;
 
   /* Font Weight */
-
   --font-medium: 500;
   --font-semibold: 600;
   --font-bold: 700;
 
   /* Box Shadow */
-
-  --shadow:0px 5px 20px 0px rgb(69 67 96 /10%);
+  --shadow: 0px 5px 20px 0px rgb(69 67 96 /10%);
 
   /* Border Radius */
-
-  --border-radius: 20px;
+  --border-radius: 2px;
 
 }
 
 [data-theme="dark"] {
-  --first-color: hsl(353, 100%, 65%);
-  --title-color: hsl(218, 11%, 69%);
-  --text-color: hsl(244,16%, 43%);
-  --body-color: hsl(258, 60%, 97%);
-  --container-color: #fff;
-
+  --main-color: hsl(244, 100%, 72%);
+  --title-color: hsl(0, 0%, 90%);
+  --text-color: hsl(0, 0%, 90%);
+  --body-color: hsl(0, 0%, 10%);
+  --container-color: #202020;
   --shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
-  --border-color: rgba (167, 174, 185, 0.1);
+  --border-color: rgba(255, 255, 255, 0.25);
+  --gradient-color: linear-gradient(180deg, rgb(43, 43, 43) 0%, rgb(128, 128, 128) 52%, rgb(189, 189, 189) 100%);
+  --background-color: linear-gradient(135deg, #0e0d0d, #1a1a1a);
+  --background-attachment: fixed;
+  --background-size: cover;
 }
 
-/* Responsive Typhography */
 
+/* Responsive Typhography */
 @media screen and (max-width: 1024px) {
   :root {
     --h1-font-size: 1.75rem;
-    --h2-font-size: 1.25rem
+    --h2-font-size: 1.25rem;
     --h3-font-size: 1rem;
     --normal-font-size: 0.9rem;
     --small-font-size: 0.813rem;
@@ -85,24 +78,39 @@ code {
 
 html {
   scroll-behavior: smooth;
+  
 }
 
-body,
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
 button,
 input,
 textarea {
   font-family: var(--body-font);
-  font-size: var (--normal-font-size);  
+  font-size: var(--normal-font-size);
+}
+
+code {
+  font-family: var(--code-font);
 }
 
 body {
   line-height: 1.7;
+  background: var(--body-color);
+ 
 }
 
 main {
-  background-color: var(--body-color);
+  background: var(--background-color);
   color: var(--text-color);
+
 }
+
 
 h1,
 h2,
@@ -118,18 +126,21 @@ ul {
 
 a {
   text-decoration: none;
+  text-align: center;
 }
 
 button {
   cursor: pointer;
   border: none;
   outline: none;
+
 }
 
 img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
   vertical-align: middle;
+
 }
 
 /* Reusable CSS Classes */
@@ -152,10 +163,10 @@ img {
 
 .section__title {
   font-size: var(--h1-font-size);
-  margin-left: 0.875rem;
-  font-weight: var(--font-bold);
+  font-weight: var(--font-semibold);
   position: relative;
-  margin-bottom: 3.75rem;
+  margin-bottom: 2rem;
+  transition: background-color 0.3s ease;
 }
 
 /* .section__title::before {
@@ -175,15 +186,25 @@ img {
 } */
 
 .btn {
-  padding: 0.75rem 2rem;
-  line-height: 1;
-  border-radius: 1.875rem;
-  box-shadow: 0 0 1px rgb (0 0 0 / 0%);
-  border: 1px solid transparent;
-  color: #fff;
-  display: inline-block;
-  background-color: var(--first-color);
-  font-weight: var(--font-bold);
+  padding: 10px 20px;
+  border-radius: 2px;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: var(--code-font);
+  color: var(--title-color);
+  background: transparent;
+  cursor: pointer;
+  transition: 0.5s ease;
+  user-select: none;
+  border: 1px solid var(--border-color);
+}
+
+.btn:hover {
+  color: #ffffff;
+  background: var(--main-color);
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #4b0988, 0 0 20px #33065e, 0 0 40px #140224,
+    0 0 75px #878588;
 }
 
 @keyframes button-push {
@@ -194,8 +215,4 @@ img {
   100% {
     transform: scale(1);
   }
-}
-
-.btn:hover {
-  animation: button-push 0.3s linear 1;
 }
