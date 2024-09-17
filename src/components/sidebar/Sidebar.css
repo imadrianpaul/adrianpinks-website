@@ -23,8 +23,8 @@ aside {
 }
 
 .nav_logo img {
-    border: 2px solid var(--main-color); /* Adds a border to the image */
-    border-radius: 2.5px; /* Optional: Makes the image circular */
+    border: 1px solid var(--main-color); /* Adds a border to the image */
+    border-radius: 10px; /* Optional: Makes the image circular */
     width: 80px; /* Set the desired width */
     height: 45px; /* Set the desired height */
     object-fit: cover; /* Ensures the image maintains aspect ratio */

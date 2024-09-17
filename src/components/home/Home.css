@@ -36,7 +36,7 @@
 }
 
 .home__social-link {
-    color:var(--title-color);
+    color: var(--title-color);
     font-size: 2rem;
     padding: 1rem 0.5rem;
     margin-top: 0.5rem;
@@ -67,7 +67,7 @@
     width: 1.25rem;
     margin: auto;
     margin-top: 0.75rem;
-    border-radius: 5px;
+    border-radius: 10px;
     position: relative;
 }
 
@@ -99,4 +99,138 @@
     left: 50%;
     transform: translateX(-50%);
     animation: ani-mouse 2s linear infinite;
+}
+
+/* Responsive Styles */
+
+/* For screens smaller than 1024px */
+@media screen and (max-width: 1024px) {
+    .intro {
+        max-width: 600px;
+    }
+
+    .home__name {
+        font-size: calc(var(--h1-font-size) - 1rem);
+    }
+
+    .home__socials {
+        margin-bottom: 2.5rem;
+        padding: 1.5rem;
+    }
+
+    .home__social-link {
+        font-size: 1.75rem;
+    }
+
+    .scroll__down {
+        bottom: 4rem;
+    }
+
+    .mouse {
+        height: 1.4rem;
+        width: 1.1rem;
+    }
+}
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .intro {
+        max-width: 500px;
+    }
+
+    .home__name {
+        font-size: calc(var(--h1-font-size) - 1.5rem);
+    }
+
+    .home__socials {
+        margin-bottom: 2rem;
+        padding: 1.25rem;
+    }
+
+    .home__social-link {
+        font-size: 1.5rem;
+    }
+
+    .scroll__down {
+        bottom: 3.5rem;
+    }
+
+    .mouse {
+        height: 1.2rem;
+        width: 1rem;
+    }
+
+    .wheel {
+        width: 0.2rem;
+        height: 0.2rem;
+    }
+}
+
+/* For screens smaller than 576px */
+@media screen and (max-width: 576px) {
+    .intro {
+        max-width: 400px;
+    }
+
+    .home__name {
+        font-size: calc(var(--h1-font-size) - 2rem);
+    }
+
+    .home__socials {
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+    }
+
+    .home__social-link {
+        font-size: 1.25rem;
+    }
+
+    .scroll__down {
+        bottom: 3rem;
+    }
+
+    .mouse {
+        height: 1rem;
+        width: 0.9rem;
+    }
+
+    .wheel {
+        width: 0.15rem;
+        height: 0.15rem;
+    }
+}
+
+/* For screens smaller than 350px */
+@media screen and (max-width: 350px) {
+    .intro {
+        max-width: 320px;
+    }
+
+    .home__name {
+        font-size: calc(var(--h1-font-size) - 2.5rem);
+    }
+
+    .home__socials {
+        margin-bottom: 1rem;
+        padding: 0.75rem;
+    }
+
+    .home__social-link {
+        font-size: 1rem;
+    }
+
+    .scroll__down {
+        bottom: 2.5rem;
+    }
+
+    .mouse {
+        height: 0.9rem;
+        width: 0.75rem;
+    }
+
+    .wheel {
+        width: 0.1rem;
+        height: 0.1rem;
+    }
 }

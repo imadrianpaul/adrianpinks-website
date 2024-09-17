@@ -18,7 +18,7 @@
     position: relative;
     display: inline-block;
     font-family: var(--code-font);
-    margin-top: 1rem;
+    margin-top: 2rem;
     text-align: center;
 }
 
@@ -32,7 +32,7 @@
     padding-bottom: 0.5rem;
     cursor: pointer;
     background: transparent;
-    bottom: 25px; 
+    bottom: 25px;
 }
 
 .contact__elink:before {
@@ -44,7 +44,7 @@
     position: absolute;
     left: 0;
     bottom: -3px;
-    transform-origin: left; 
+    transform-origin: left;
     transform: scale(0);
     transition: 0.50s linear;
 }
@@ -66,7 +66,7 @@
 }
 
 .contact__social-link {
-    color:var(--title-color);
+    color: var(--title-color);
     font-size: 2rem;
     padding: 1rem 0.5rem;
     margin-top: 0.5rem;
@@ -88,8 +88,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
-    white-space: nowrap; /* Prevents the tooltip from breaking into multiple lines */
-
+    white-space: nowrap;
 }
 
 .contact__email:hover .contact__tooltip {
@@ -100,4 +99,43 @@
 .contact__tooltip.copied {
     content: "Copied!";
     background-color: var(--body-color);
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+    .contact__elink {
+        font-size: 1.1rem;
+    }
+
+    .contact__social-link {
+        font-size: 1.75rem;
+    }
+
+    .contact__tooltip {
+        left: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact__container {
+        padding: 1rem;
+    }
+
+    .contact__phrase {
+        font-size: 0.9rem;
+    }
+
+    .contact__elink {
+        font-size: 1rem;
+    }
+
+    .contact__social-link {
+        font-size: 1.5rem;
+        padding: 0.5rem 0.25rem;
+    }
+
+    .contact__tooltip {
+        left: 40%;
+    }
 }

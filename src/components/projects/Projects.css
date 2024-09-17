@@ -1,3 +1,4 @@
+/* Filters and Items */
 .portfolio__filters {
     display: flex;
     align-items: center;
@@ -14,7 +15,6 @@
 
 .portfolio__item-active {
     color: var(--main-color);
-    
 }
 
 .portfolio__item:hover {
@@ -33,53 +33,85 @@
     transform: scale(1);
 }
 
-.portfolio__container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem; 
+/* Portfolio Grid Layout */
+.portfolio__grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 columns: left (card) and right (description) */
+    gap: 2rem; /* Gap between the card and description */
+    margin-bottom: 2rem; /* Spacing between each project */
 }
 
+/* Portfolio Card */
 .portfolio__card {
     margin: auto;
     width: 100%;
     height: 500px;
     background-color: var(--container-color);
-    border-radius: 2px;
+    border-radius: 10px;
     position: relative;
     color: #141417;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
     transition: background-color 0.3s ease;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.portfolio__desc {
+    align-items: center; /* Vertically center the description text */
+    font-family: var(--code-font);
+    font-size: 1rem;
+    color: var(--text-color);
+    padding: 1rem;
+    background-color: var(--container-color);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    transition: background-color 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.portfolio__desc:hover {
+    background-color: var(--gradient-color);
+}
+
+.portfolio__info {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    text-align: justify;
+    height: 270px;
 }
 
 .portfolio__card:hover {
     background-color: var(--gradient-color);
 }
 
+/* Thumbnail Images */
 .portfolio__thumbnail img {
     background: var(--container-color);
     background: var(--gradient-color);
     width: 100%;
-    height: 250px; /* Set the desired height for the images */
+    height: 465px; /* Set the desired height for the images */
     object-fit: cover; /* This ensures the image covers the area without distortion */
-    border-radius: 2px;
+    border-radius: 10px;
 }
 
+/* Portfolio Titles */
 .portfolio__title {
-    margin-top: 2rem;
-    margin-left: 1.75rem;
-    padding-bottom: 2rem;
-    margin-right: 1.75rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
     font-family: var(--code-font);
+    font-weight: var(--font-semibold);
     font-size: 1rem;
-    font-weight: 600;
     height: 60px;
 }
 
+/* Portfolio Category Container */
 .portfolio__category-container {
     display: flex;
     flex-wrap: wrap;
     gap: 0.25rem; /* Space between the tags */
-    margin-top: 0.5rem; /* Add spacing from the title or other elements */
     margin-left: 1rem;
+    padding-bottom: 1rem;
 }
 
 /* Individual category (tag) */
@@ -95,46 +127,45 @@
     cursor: default;
 }
 
+/* Portfolio Buttons */
 .portfolio__buttons {
-    display: flex;  
+    display: flex;
+    justify-content: center; /* Align buttons horizontally */
+    align-items: center;     /* Align buttons vertically */
+    gap: 1rem; /* Adjust spacing between buttons */
 }
 
 .portfolio__button {
-    position: absolute;
-    bottom: 20px; /* Place 20px from the bottom */
-    left: 25px; /* Center horizontally */
     color: var(--text-color);
     font-size: 2rem;
     transition: 0.3s;
-} 
+    padding-left: 0.75rem;
+    padding-right: 0.50rem;
+    padding-top: 0.75rem;
+}
 
 .portfolio__github-button {
-    position: absolute;
-    bottom: 20px; /* Place 20px from the bottom */
-    left: 75px; /* Center horizontally */
     color: var(--text-color);
     font-size: 2rem;
     transition: 0.3s;
+    padding-left: 0.50rem;
+    padding-top: 0.75rem;
 }
 
 .portfolio__vs-button {
+    margin-left: 0.75rem;
     font-size: 17px;
-    border-radius: 2px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
     font-weight: 500;
     color: var(--title-color);
     background: transparent;
     transition: 0.3s ease;
-    padding: 10px 20px;
+    padding: 8px 20px;
     font-family: var(--code-font);
-    border: 1px solid;
-    position: absolute; /* Absolute positioning */
-    bottom: 25px; /* Place at the bottom */
-    right: 25px; /* Align with the right side */
-    z-index: 1; /* Set a lower z-index so it doesn't overlap category */
 }
 
-/* Individual button positioning */
-
+/* Button Hover States */
 .portfolio__button:hover,
 .portfolio__github-button:hover {
     color: var(--main-color);
@@ -144,16 +175,16 @@
     color: var(--title-color);
     background: var(--main-color);
     text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-    box-shadow: 0 0 5px #5a3081, 0 0 20px #42245f, 0 0 40px #1b1124,
-      0 0 75px #878588;
-} 
-    
+    box-shadow: 0 0 5px #5a3081, 0 0 20px #42245f, 0 0 40px #1b1124, 0 0 75px #878588;
+}
+
 .portfolio__card:hover .portfolio__title,
 .portfolio__card:hover .portfolio__category {
     opacity: 1;
     transform: translateY(0);
 }
 
+/* Media Queries */
 @media screen and (max-width: 1024px) {
     .portfolio__filters {
         justify-content: center;
@@ -181,5 +212,50 @@
 @media screen and (max-width: 350px) {
     .portfolio__container {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive Adjustments for Mobile and Tablet */
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .portfolio__grid-container {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
+
+    .portfolio__card {
+        height: auto; /* Let the card height adjust based on content */
+    }
+
+    .portfolio__thumbnail img {
+        height: 225px; /* Set a fixed height for mobile, adjust as needed */
+    }
+
+    .portfolio__desc {
+        width: 339.34px;
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .portfolio__grid-container {
+        grid-template-columns: repeat(1, 2fr); /* Two columns for tablets */
+        gap: 1rem;
+    }
+
+    .portfolio__container {
+        gap: 1.5rem;
+    }
+
+    .portfolio__card {
+        height: auto; /* Let the card height adjust based on content */
+    }
+
+    .portfolio__thumbnail img {
+        height: 225px; /* Slightly taller image for tablet view */
+    }
+
+    .portfolio__desc {
+        width: 339.34px;
+        height: 500px;
     }
 }
