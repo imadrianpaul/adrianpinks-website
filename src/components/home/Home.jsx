@@ -8,7 +8,7 @@ const Home = () => {
         <section className="home container" id='home'>
             <div className="intro">
                 <h1 className="home__name">Adrian Paul Pingkian</h1>
-                <div className="home__education">I'm a UI/UX Designer</div>
+                <div className="home__education">I'm a UI/UX Designer and a Front-end Web Developer</div>
 
                 <Socials />
 
