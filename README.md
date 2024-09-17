@@ -18,4 +18,5 @@ My personal portfolio website. To compile the projects I've created or developed
 
 **September 16, 2024** LAUNCH DATE
 
-- Launched the website and hosted using Vercel 
+- Launched the website and hosted using Vercel
+- Merged conflict commits from different repository and this.
