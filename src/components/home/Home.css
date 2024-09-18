@@ -110,7 +110,7 @@
     }
 
     .home__name {
-        font-size: calc(var(--h1-font-size) - 1rem);
+        font-size: var(--h1-font-size);
     }
 
     .home__socials {
@@ -139,7 +139,7 @@
     }
 
     .home__name {
-        font-size: calc(var(--h1-font-size) - 1.5rem);
+        font-size: var(--h1-font-size);
     }
 
     .home__socials {
@@ -173,17 +173,16 @@
     }
 
     .home__name {
-        font-size: calc(var(--h1-font-size) - 2rem);
+        font-size: var(--h1-font-size);
     }
 
     .home__socials {
-        flex-direction: column;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2.5rem;
         padding: 1rem;
     }
 
     .home__social-link {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
 
     .scroll__down {
@@ -208,20 +207,20 @@
     }
 
     .home__name {
-        font-size: calc(var(--h1-font-size) - 2.5rem);
+        font-size: var(--h1-font-size);
     }
 
     .home__socials {
-        margin-bottom: 1rem;
+        margin-bottom: 2.5rem;
         padding: 0.75rem;
     }
 
     .home__social-link {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .scroll__down {
-        bottom: 2.5rem;
+        bottom: 3rem;
     }
 
     .mouse {

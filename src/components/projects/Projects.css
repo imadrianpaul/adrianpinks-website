@@ -186,6 +186,11 @@
 
 /* Media Queries */
 @media screen and (max-width: 1024px) {
+    .portfolio__grid-container {
+        grid-template-columns: repeat(1, 2fr); /* Two columns for tablets */
+        gap: 1rem;
+    }
+
     .portfolio__filters {
         justify-content: center;
     }
@@ -193,61 +198,7 @@
     .portfolio__container {
         grid-template-columns: repeat(2, 330px);
         justify-content: center;
-        row-gap: 30px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .portfolio__container {
-        grid-template-columns: 310px;
-        justify-content: center;
-        row-gap: 30px;
-    }
-
-    .portfolio__filters {
-        row-gap: 4px;
-    }
-}
-
-@media screen and (max-width: 350px) {
-    .portfolio__container {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Responsive Adjustments for Mobile and Tablet */
-/* Mobile View */
-@media screen and (max-width: 768px) {
-    .portfolio__grid-container {
-        grid-template-columns: 1fr; /* Single column for mobile */
-    }
-
-    .portfolio__card {
-        height: auto; /* Let the card height adjust based on content */
-    }
-
-    .portfolio__thumbnail img {
-        height: 225px; /* Set a fixed height for mobile, adjust as needed */
-    }
-
-    .portfolio__desc {
-        width: 339.34px;
-        height: 500px;
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .portfolio__grid-container {
-        grid-template-columns: repeat(1, 2fr); /* Two columns for tablets */
-        gap: 1rem;
-    }
-
-    .portfolio__container {
         gap: 1.5rem;
-    }
-
-    .portfolio__card {
-        height: auto; /* Let the card height adjust based on content */
     }
 
     .portfolio__thumbnail img {
@@ -257,5 +208,31 @@
     .portfolio__desc {
         width: 339.34px;
         height: 500px;
+    }
+
+    .portfolio__card {
+        height: auto; /* Let the card height adjust based on content */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio__container {
+        grid-template-columns: 335px;
+        gap: 1.5rem;
+
+    }
+
+    .portfolio__filters {
+        row-gap: 4px;
+    }
+
+    .portfolio__thumbnail img {
+        height: 225px; /* Set a fixed height for mobile, adjust as needed */
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .portfolio__container {
+        grid-template-columns: 1fr;
     }
 }

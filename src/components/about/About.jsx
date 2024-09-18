@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import './About.css';
-import Resume from '../../assets/Adrian Pingkian  Resume.pdf';
+import Resume from '../../assets/Adrian Pingkian Resume.pdf';
 import codingImage from '../../assets/codingimg.jpg';
 import figmaImage from '../../assets/figmaImage.jpg';
 
