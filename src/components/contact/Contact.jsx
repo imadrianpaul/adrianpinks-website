@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./Contact.css";
 import Socials2 from "./Socials2";
 
-import { AiOutlineLinkedin, AiOutlineFacebook, AiOutlineInstagram, AiOutlineGithub  } from "react-icons/ai"; 
-
 const Contact = () => {
     const [tooltipText, setTooltipText] = useState("Click to copy");
 

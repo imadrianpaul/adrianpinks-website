@@ -1,18 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Filter from "./Filter";
 import "./Projects.css";
 import { AiOutlineGithub } from "react-icons/ai";
 import { LiaExternalLinkAltSolid } from "react-icons/lia";
-
-
-
-
 import { motion } from "framer-motion";
+import { FaArrowUp } from "react-icons/fa"; // Import the "up arrow" icon
 
 const Projects = () => {
     const [items, setItems] = useState(Filter);
     const [activeFilter, setActiveFilter] = useState(0);
+    const [showScroll, setShowScroll] = useState(false); // State to track scroll visibility
 
+    const projectsRef = useRef(null); // Ref to scroll back to the projects section
+
+    // Function to filter projects
     const filterItems = (categoryItem) => {
         const updatedItems = Filter.filter((curElem) => {
             if (Array.isArray(categoryItem)) {
@@ -20,12 +21,38 @@ const Projects = () => {
             }
             return curElem.category.includes(categoryItem);
         });
-
         setItems(updatedItems);
     };
 
+    // Function to scroll back to the Projects section
+    const scrollToProjects = () => {
+        projectsRef.current.scrollIntoView({ behavior: "smooth" });
+    };
+
+    // Function to handle scroll visibility of the "Back to Top" button
+    const checkScrollTop = () => {
+        const projectsSection = projectsRef.current;
+        const rect = projectsSection.getBoundingClientRect();
+
+        const isVisibleInViewport = rect.top <window.innerHeight && rect.bottom > 0;
+        const isScrolledDown = window.scrollY > projectsSection.offsetTop;
+
+        if (isVisibleInViewport && isScrolledDown) {
+            setShowScroll(true);
+        } else {
+            setShowScroll(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", checkScrollTop);
+        return () => {
+            window.removeEventListener("scroll", checkScrollTop);
+        };
+    }, []);
+
     return (
-        <section className="portfolio container section" id="portfolio">
+        <section className="portfolio container section" id="portfolio" ref={projectsRef}>
             <h2 className="section__title">Projects</h2>
 
             <div className="portfolio__filters">
@@ -40,7 +67,7 @@ const Projects = () => {
                 </span>
                 <span className={activeFilter === 3 ? 'portfolio__item portfolio__item-active' : 'portfolio__item'} onClick={() => { filterItems("project"); setActiveFilter(3); }}>
                     Certificates
-                </span>                
+                </span>
             </div>
 
             <div className="portfolio__container grid">
@@ -83,6 +110,13 @@ const Projects = () => {
                     );
                 })}
             </div>
+
+            {/* Back to Top Button */}
+            {showScroll && (
+                <div className="back-to-top" onClick={scrollToProjects}>Back to top
+                    <FaArrowUp className="back-to-top-icon" />
+                </div>
+            )}
         </section>
     );
 };
