@@ -39,7 +39,7 @@ const Sidebar = (props) => {
         <>
             <aside className={toggle ? 'aside show-menu' : 'aside'}>
                 {/* Use Link for logo to navigate to the home page */}
-                <Link to="/" className="nav_logo" onClick={changeLogo}>
+                <Link to="/#home" className="nav_logo" onClick={changeLogo}>
                     <img src={currentLogo} alt="logo" />
                 </Link>
 
