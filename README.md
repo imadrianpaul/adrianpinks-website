@@ -1,6 +1,12 @@
 # adrianpinks-website
 My personal portfolio website. To compile the projects I've created or developed, as well the projects I've been into. 
 
+**September 19, 2024** UPDATE v2.3
+
+- Commited new changes
+- Fixed the responsiveness of the mobile version
+- Updated the look of view study buttons
+
 **September 18, 2024** UPDATE v2.2
 
 - Commited new changes
