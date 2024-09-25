@@ -1,6 +1,13 @@
 # adrianpinks-website
 My personal portfolio website. To compile the projects I've created or developed, as well the projects I've been into. 
 
+**September 25, 2024** UPDATE v2.5
+
+- Commited new changes
+- Fixed the alignment, transition, and responsiveness of the **About section**
+- Added node.js in the technologies
+  
+
 **September 19, 2024** UPDATE v2.3
 
 - Commited new changes
