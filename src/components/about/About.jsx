@@ -13,6 +13,7 @@ import { ReactComponent as PHPDark } from '../../assets/PHPDark.svg';
 import { ReactComponent as JavaScript } from '../../assets/JavaScript.svg';
 import { ReactComponent as ReactDark } from '../../assets/ReactDark.svg';
 import { ReactComponent as Laravel } from '../../assets/LaravelDark.svg';
+import { ReactComponent as NodeJS } from '../../assets/NodeJS.svg';
 
 import { ReactComponent as Figma } from '../../assets/Figma.svg';
 import { ReactComponent as Git } from '../../assets/Git.svg';
@@ -73,6 +74,7 @@ const About = () => {
                                     { Component: CSS, delay: 0.3 },
                                     { Component: JavaScript, delay: 0.3 },
                                     { Component: ReactDark, delay: 0.3 },
+                                    { Component: NodeJS, delay: 0.3 },
                                     { Component: PHPDark, delay: 0.3 },
                                     { Component: Laravel, delay: 0.3 },
                                     { Component: CSharp, delay: 0.3 }
