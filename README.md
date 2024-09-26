@@ -6,6 +6,7 @@ My personal portfolio website. To compile the projects I've created or developed
 - Commited new changes
 - Fixed the alignment, transition, and responsiveness of the **About section**
 - Added node.js in the technologies
+- Fixed **Sidebar section** navigate to **Home section**
   
 
 **September 19, 2024** UPDATE v2.3
