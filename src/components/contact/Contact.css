@@ -99,6 +99,7 @@
 .contact__tooltip.copied {
     content: "Copied!";
     background-color: var(--body-color);
+    
 }
 
 /* Responsive Styles */
@@ -110,11 +111,14 @@
 
     .contact__social-link {
         font-size: 1.75rem;
+        padding-top: 2rem;
     }
 
     .contact__tooltip {
-        left: 50%;
-    }
+        left: 40%;
+        top: 2.5rem;
+        align-items: center;
+    } 
 }
 
 @media screen and (max-width: 480px) {
@@ -133,9 +137,10 @@
     .contact__social-link {
         font-size: 1.5rem;
         padding: 0.5rem 0.25rem;
+        padding-top: 2rem;
     }
 
     .contact__tooltip {
-        left: 40%;
+        left: 33%;
     }
 }
