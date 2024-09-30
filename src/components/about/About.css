@@ -94,7 +94,7 @@
 .about__icon {
     font-size: var(--h2-font-size);
     display: inline-block;
-    padding: 0 1rem;
+    padding: 0 .50rem;
 }
 
 .about__title {

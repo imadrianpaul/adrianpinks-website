@@ -33,21 +33,33 @@
 
 .nav_logo img:hover {
     border-color: var(--title-color); /* Changes border color on hover */
+    transform: scale(1.2);
+    
 }
 
 .nav__link {
     font-size: 2rem;
     color: var(--title-color);
     font-weight: var(--font-bold);
-    transition: 0.3s; 
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .nav__link:hover {
     color: var(--main-color);
+    transform: scale(1.2); /* Should enlarge when hovering */
+}
+
+.nav__item {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav__item:hover {
+    transform: scale(1.2);
 }
 
 .footer__button {
     background-color: transparent;
+    padding-bottom: 1rem;
 }
 
 .copyright {

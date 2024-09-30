@@ -169,6 +169,7 @@
 .portfolio__button:hover,
 .portfolio__github-button:hover {
     color: var(--main-color);
+    transform: scale(1.2);
 }
 
 .portfolio__vs-button:hover {

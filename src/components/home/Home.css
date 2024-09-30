@@ -40,11 +40,13 @@
     font-size: 2rem;
     padding: 1rem 0.5rem;
     margin-top: 0.5rem;
-    transition: 0.3s;
+    transition: transform 0.3s ease, color 0.3s ease;
+
 }
 
 .home__social-link:hover {
     color: var(--main-color);
+    transform: scale(1.2);
 }
 
 .scroll__down {

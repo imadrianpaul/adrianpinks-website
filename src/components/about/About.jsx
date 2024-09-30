@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import './About.css';
-import Resume from '../../assets/Adrian Pingkian Resume.pdf';
+import Resume from '../../assets/adrian-pingkian-resume.pdf';
 import codingImage from '../../assets/codingimg.jpg';
 import figmaImage from '../../assets/figmaImage.jpg';
 
@@ -23,7 +23,8 @@ import { ReactComponent as Photoshop } from '../../assets/Photoshop.svg';
 import { ReactComponent as Premiere } from '../../assets/Premiere.svg';
 import { ReactComponent as VSCode } from '../../assets/VSCode.svg';
 import { ReactComponent as VSS } from '../../assets/VSS.svg';
-import { ReactComponent as XD } from '../../assets/XD.svg';
+import { ReactComponent as XD } from '../../assets/XD.svg'
+import { ReactComponent as Canva } from '../../assets/canva-auto.svg';
 
 
 
@@ -53,7 +54,7 @@ const About = () => {
                     <div className="about__info">
                         <div className="section__title">About Me</div>
                         <p className="about__description">
-                            I'm Adrian, a web designer living in Philippines, Cavite Province. I studied at Adamson University, earned Bachelor's Degree and received the 
+                            Hello! I'm Adrian, a UI/UX Designer and Front-end Web Developer living in Philippines, Cavite Province. I studied at Adamson University, earned Bachelor's Degree and received the 
                             diploma in Information Technology. <br/><br/>
                             I've always been fascinated by the world of designing. I want to see my creative ideas transform from vision to reality.
                             Also, I like lines.<br/><br/>
@@ -67,7 +68,7 @@ const About = () => {
                 <div className="about__skills grid">
                     <div className="about__wholebox">
                         <div className="about__box1">
-                            <h3 className="about__label">Technologies</h3>
+                            <h3 className="about__label">Techs</h3>
                             <div className="about__language">
                                 {[
                                     { Component: HTML, delay: 0 },
@@ -109,7 +110,8 @@ const About = () => {
                                     { Component: Premiere, delay: 0.3 },
                                     { Component: Illustrator, delay: 0.3 },
                                     { Component: XD, delay: 0.3 },
-                                    { Component: Figma, delay: 0.3 }
+                                    { Component: Figma, delay: 0.3 },
+                                    { Component: Canva, delay: 0.3 }
                                 ].map(({ Component, delay }, index) => (
                                     <motion.div
                                         key={index}
