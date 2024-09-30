@@ -1,6 +1,12 @@
 # adrianpinks-website
 My personal portfolio website. To compile the projects I've created or developed, as well the projects I've been into. 
 
+**September 30, 2024** UPDATE v2.9
+
+- Added icon scaling when hovering
+- Added an icon in tools
+- Updated resume
+
 **September 27, 2024** UPDATE v2.7
 
 - Updated the favicon.ico
