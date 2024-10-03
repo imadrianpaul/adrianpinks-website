@@ -202,12 +202,12 @@
     align-items: center;
     cursor: pointer;
     z-index: 1000;
-    transition: 0.3s;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .back-to-top:hover {
     background-color: var(--main-color);
+    transition: 0.3s ease;
     text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
     box-shadow: 0 0 5px #5a3081, 0 0 20px #42245f, 0 0 40px #1b1124, 0 0 75px #878588;
 }
