@@ -105,23 +105,11 @@ code {
 body {
   line-height: 1.7;
   background: var(--body-color);
-
-}
-
-.background-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50vh; /* Adjust the height of the overlay as needed */
-  background: rgba(212, 103, 103, 0.5); /* Semi-transparent overlay; customize as needed */
-  z-index: 1; /* Ensures the overlay stays above the main content */
 }
 
 main {
   background: var(--background-color);
   color: var(--text-color);
-  z-index: 0;
 }
 
 

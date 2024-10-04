@@ -54,6 +54,7 @@
     transition: background-color 0.3s ease;
     padding: 1rem;
     border: 1px solid var(--border-color);
+    overflow: hidden;
 }
 
 .portfolio__desc {
@@ -81,8 +82,8 @@
     height: 270px;
 }
 
-.portfolio__card:hover {
-    background-color: var(--gradient-color);
+.portfolio__card:hover .portfolio__thumbnail img {
+    transform: scale(1.1); /* Scale up the image slightly */
 }
 
 /* Thumbnail Images */
@@ -93,6 +94,7 @@
     height: 465px; /* Set the desired height for the images */
     object-fit: cover; /* This ensures the image covers the area without distortion */
     border-radius: 10px;
+    transition: transform 0.5s ease; /* Smooth transition for scaling */
 }
 
 /* Portfolio Titles */

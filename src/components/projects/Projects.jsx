@@ -59,14 +59,11 @@ const Projects = () => {
                 <span className={activeFilter === 0 ? 'portfolio__item portfolio__item-active' : 'portfolio__item'} onClick={() => { setItems(Filter); setActiveFilter(0); }}>
                     Works
                 </span>
-                <span className={activeFilter === 1 ? 'portfolio__item portfolio__item-active' : 'portfolio__item'} onClick={() => { filterItems(["frontend", "backend"]); setActiveFilter(1); }}>
+                <span className={activeFilter === 1 ? 'portfolio__item portfolio__item-active' : 'portfolio__item'} onClick={() => { filterItems(["frontend", "backend", "development"]); setActiveFilter(1); }}>
                     Development
                 </span>
                 <span className={activeFilter === 2 ? 'portfolio__item portfolio__item-active' : 'portfolio__item'} onClick={() => { filterItems("design"); setActiveFilter(2); }}>
                     Design
-                </span>
-                <span className={activeFilter === 3 ? 'portfolio__item portfolio__item-active' : 'portfolio__item'} onClick={() => { filterItems("project"); setActiveFilter(3); }}>
-                    Certificates
                 </span>
             </div>
 
@@ -76,10 +73,10 @@ const Projects = () => {
 
                     return (
                         <motion.div
-                            animate={{ opacity: 1, rotateY: 0 }}
-                            initial={{ opacity: 0, rotateY: 90 }}
-                            exit={{ opacity: 0, rotateY: 90 }}
-                            transition={{ duration: 0.5 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, x: -100 }}
+                            exit={{ opacity: 0, x: 200 }}
+                            transition={{ duration: 0.5, ease: "easeInOut" }}
                             className="portfolio__grid-container"
                             key={id}>
                             <div className="portfolio__card">
@@ -89,7 +86,8 @@ const Projects = () => {
                             </div>
                             <div className="portfolio__desc">
                                 <h3 className="portfolio__title">{title}</h3>
-                                <div className="portfolio__info"><p>{description}</p>
+                                <div className="portfolio__info">
+                                    <p>{description}</p>
                                 </div>
                                 <div className="portfolio__category-container">
                                     {category.map((cat, index) => (

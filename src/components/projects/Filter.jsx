@@ -45,7 +45,7 @@ const Filter = [
         id: 5,
         image: Proj5,
         title: "Hardware Device Monitoring System (Capstone Project)",
-        category: ["project"],
+        category: ["development"],
         urlgithub: "https://github.com/imadrianpaul",
         urlstudy: capstoneProj,
         description: " The system helps IT technicians track hardware statuses in real-time, detect issues early, and manage network resources through a visual mapping feature. It reduces their workload and ensures optimal computer performance."
