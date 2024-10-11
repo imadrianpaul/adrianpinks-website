@@ -7,6 +7,8 @@ import Projects from './components/projects/Projects';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import { useLocalStorage } from 'usehooks-ts';
+import gradientBgLight from './assets/gradientbg-light.jpg'; // Image for light theme
+import gradientBgDark from './assets/gradientbg-dark.jpg';  // Image for dark theme
 
 function App() {
   const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -17,6 +19,8 @@ function App() {
     setTheme(newTheme);
   };
 
+  const backgroundImage = theme === 'light' ? gradientBgLight : gradientBgDark;
+
   return (
     <div className="app" data-theme={theme}>
       <Router>
@@ -25,11 +29,18 @@ function App() {
           <Routes>
             <Route path="/" element={
               <>
-                <Home />
-                <About />
-                <Projects />
-                <Contact />
-                <Footer />
+                {/* Home section with custom background */}
+                <div className="home__section" style={{ backgroundImage: `url(${backgroundImage})` }}>
+                  <Home />
+                </div>
+                
+                {/* Background starts from About */}
+                <div className="main__background">
+                  <About />
+                  <Projects />
+                  <Contact />
+                  <Footer />
+                </div>
               </>
             } />
           </Routes>

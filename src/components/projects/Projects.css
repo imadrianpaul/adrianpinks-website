@@ -175,10 +175,10 @@
 }
 
 .portfolio__vs-button:hover {
-    color: var(--title-color);
+    color: #ffffff;
     background: var(--main-color);
-    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-    box-shadow: 0 0 5px #5a3081, 0 0 20px #42245f, 0 0 40px #1b1124, 0 0 75px #878588;
+    text-shadow: var(--text-shadow-color);
+    box-shadow: var(--box-shadow-color);
 }
 
 .portfolio__card:hover .portfolio__title,
@@ -208,16 +208,22 @@
 }
 
 .back-to-top:hover {
+    color: #ffffff;
     background-color: var(--main-color);
     transition: 0.3s ease;
-    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-    box-shadow: 0 0 5px #5a3081, 0 0 20px #42245f, 0 0 40px #1b1124, 0 0 75px #878588;
+    text-shadow: var(--text-shadow-color);
+    box-shadow: var(--box-shadow-color);
 }
 
 .back-to-top-icon {
     color: var(--title-color);
     font-size: 1.5rem;
     margin-left: 0.75rem;
+}
+
+.back-to-top-icon:hover {
+    color: #ffffff;
+    transition: 0.3s ease;
 }
 
 

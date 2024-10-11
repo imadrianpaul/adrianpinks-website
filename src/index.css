@@ -8,14 +8,17 @@
 :root {
 
   /* Colors */
-  --main-color: hsl(244, 46%, 69%);
+  --main-color: hsl(209, 72%, 69%);
   --title-color: hsl(0, 0%, 10%);
   --text-color: hsl(0, 0%, 10%);
   --body-color: hsl(0, 0%, 97%);
   --container-color: #eeeeee;
   --border-color: rgba(0, 0, 0, 0.25);
   --gradient-color: linear-gradient(180deg, rgb(206, 206, 206) 0%, rgb(207, 207, 207) 52%, rgb(138, 138, 138) 100%);
-  --background-color: linear-gradient(135deg, #f5f5f5, #c9c9c9);
+  --background-color: linear-gradient(180deg, rgb(245, 245, 245), rgb(201, 201, 201));
+  --text-shadow-color: 0 0 5px rgb(36, 36, 36), 0 0 10px rgb(27, 27, 27), 0 0 20px rgb(255, 255, 255);
+  --box-shadow-color: 0 0 5px #e2e2e2, 0 0 20px #bdbdbd, 0 0 40px #77abf0, 0 0 75px #878588;
+
   --background-attachment: fixed;
   --background-size: cover;
 
@@ -43,7 +46,7 @@
 }
 
 [data-theme="dark"] {
-  --main-color: hsl(244, 100%, 72%);
+  --main-color: hsl(71, 49%, 54%);
   --title-color: hsl(0, 0%, 90%);
   --text-color: hsl(0, 0%, 90%);
   --body-color: hsl(0, 0%, 10%);
@@ -51,7 +54,11 @@
   --shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
   --border-color: rgba(255, 255, 255, 0.25);
   --gradient-color: linear-gradient(180deg, rgb(43, 43, 43) 0%, rgb(128, 128, 128) 52%, rgb(189, 189, 189) 100%);
-  --background-color: linear-gradient(135deg, #0a0a0a, #222222);
+  --background-color: linear-gradient(135deg, rgb(10, 10, 10), rgb(34, 34, 34));
+
+  --text-shadow-color: 0 0 5px rgb(36, 36, 36), 0 0 10px rgb(27, 27, 27), 0 0 20px rgb(255, 255, 255);
+  --box-shadow-color: 0 0 5px #e2e2e2, 0 0 20px #bdbdbd, 0 0 40px #bfe97a, 0 0 75px #878588;
+
   --background-attachment: fixed;
   --background-size: cover;
 }
@@ -112,6 +119,16 @@ main {
   color: var(--text-color);
 }
 
+.home__section {
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Full height for the home section */
+  color: var(--text-color); /* Text color */
+}
+
+.main__background {
+  background: var(--background-color); /* The main background color */
+}
 
 h1,
 h2,
@@ -205,9 +222,9 @@ img {
 .btn:hover {
   color: #ffffff;
   background: var(--main-color);
-  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-  box-shadow: 0 0 5px #4b0988, 0 0 20px #33065e, 0 0 40px #140224,
-    0 0 75px #878588;
+
+  text-shadow: var(--text-shadow-color);
+  box-shadow: var(--box-shadow-color);
 }
 
 @keyframes button-push {
