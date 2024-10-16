@@ -33,7 +33,7 @@ const Filter = [
         title: "Flexify",
         category: ["design", "ui/ux"],
         urlgithub: "https://github.com/imadrianpaul",
-        urlfigma: "",
+        urlfigma: "https://www.figma.com/proto/Io7BRAUbIzkBzWQpMbxa8s/Flexify?node-id=154-596&node-type=frame&t=NNdsEaak8K8UilnD-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=152%3A2487&show-proto-sidebar=1",
         urlstudy: "/",
         description: "Flexify is a modern banking app that simplifies financial management with an intuitive interface for tracking expenses and managing cards. Case study coming soon."
     },
