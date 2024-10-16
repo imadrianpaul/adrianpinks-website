@@ -1,6 +1,14 @@
 # adrianpinks-website
 My personal portfolio website. To compile the projects I've created or developed, as well the projects I've been into. 
 
+**October 11, 2024** UPDATE v3.1
+
+- Changed the main color of the website for both light mode and dark mode.
+- Seperated the **Home section** and added a background filled with noise.
+- Updated the spacing in the codes
+
+----------------------------------
+
 **September 30, 2024** UPDATE v2.9
 
 - Added icon scaling when hovering
