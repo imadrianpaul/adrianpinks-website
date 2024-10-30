@@ -133,6 +133,7 @@
 .portfolio__buttons {
     display: flex;
     justify-content: left; /* Align buttons horizontally */
+    align-items: center;
     padding-left: 0.25rem;
     gap: 1rem; /* Adjust spacing between buttons */
 }
@@ -144,6 +145,7 @@
     padding-left: 0.50rem;
     padding-right: 0.50rem;
     padding-top: 0.75rem;
+
 }
 
 .portfolio__github-button {
@@ -156,20 +158,32 @@
 }
 
 .portfolio__vs-button {
-    font-size: 2rem;
+    padding: 10px 20px; /* Matches .btn padding */
+    font-size: 17px;    /* Matches .btn font size */
+    font-weight: 500;   /* Matches .btn font weight */
     color: var(--title-color);
-    transition: 0.3s ease;
-    padding-left: 0.50rem;
-    padding-right: 0.50rem;
-    padding-top: 0.75rem;
+    background: transparent;
+    border-radius: 10px; /* Matches .btn border-radius */
+    border: 1px solid var(--border-color);
+    transition: 0.5s ease;
+    cursor: pointer;
+    line-height: 1.2;
 }
+
 
 /* Button Hover States */
 .portfolio__button:hover,
-.portfolio__github-button:hover,
-.portfolio__vs-button:hover {
+.portfolio__github-button:hover {
     color: var(--main-color);
     transform: scale(1.2);
+}
+
+.portfolio__vs-button:hover {
+    color: #ffffff;
+    background: var(--main-color);
+  
+    text-shadow: var(--text-shadow-color);
+    box-shadow: var(--box-shadow-color);
 }
 
 .portfolio__card:hover .portfolio__title,

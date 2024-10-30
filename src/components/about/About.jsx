@@ -5,7 +5,6 @@ import Resume from '../../assets/adrian-pingkian-resume.pdf';
 import codingImage from '../../assets/codingimg.jpg';
 import figmaImage from '../../assets/figmaImage.jpg';
 
-
 import { ReactComponent as CSharp } from '../../assets/csharp.svg';
 import { ReactComponent as CSS } from '../../assets/css.svg';
 import { ReactComponent as HTML } from '../../assets/HTML.svg';
