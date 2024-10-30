@@ -71,7 +71,16 @@
     margin-top: 0.75rem;
     border-radius: 10px;
     position: relative;
+    transition: 0.5s ease;
 }
+
+.mouse:hover {
+    color: #ffffff;
+    background: var(--main-color);
+  
+    text-shadow: var(--text-shadow-color);
+    box-shadow: var(--box-shadow-color);
+  }
 
 @keyframes ani-mouse {
     0% {
