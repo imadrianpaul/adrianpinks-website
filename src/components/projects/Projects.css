@@ -132,53 +132,44 @@
 /* Portfolio Buttons */
 .portfolio__buttons {
     display: flex;
-    justify-content: center; /* Align buttons horizontally */
-    align-items: center;     /* Align buttons vertically */
+    justify-content: left; /* Align buttons horizontally */
+    padding-left: 0.25rem;
     gap: 1rem; /* Adjust spacing between buttons */
 }
 
 .portfolio__button {
-    color: var(--text-color);
+    color: var(--title-color);
     font-size: 2rem;
-    transition: 0.3s;
-    padding-left: 0.75rem;
+    transition: 0.3s ease;
+    padding-left: 0.50rem;
     padding-right: 0.50rem;
     padding-top: 0.75rem;
 }
 
 .portfolio__github-button {
-    color: var(--text-color);
+    color: var(--title-color);
     font-size: 2rem;
-    transition: 0.3s;
+    transition: 0.3s ease;
     padding-left: 0.50rem;
+    padding-right: 0.50rem;
     padding-top: 0.75rem;
 }
 
 .portfolio__vs-button {
-    margin-left: 0.75rem;
-    font-size: 17px;
-    border-radius: 10px;
-    border: 1px solid var(--border-color);
-    font-weight: 500;
+    font-size: 2rem;
     color: var(--title-color);
-    background: transparent;
     transition: 0.3s ease;
-    padding: 8px 20px;
-    font-family: var(--code-font);
+    padding-left: 0.50rem;
+    padding-right: 0.50rem;
+    padding-top: 0.75rem;
 }
 
 /* Button Hover States */
 .portfolio__button:hover,
-.portfolio__github-button:hover {
+.portfolio__github-button:hover,
+.portfolio__vs-button:hover {
     color: var(--main-color);
     transform: scale(1.2);
-}
-
-.portfolio__vs-button:hover {
-    color: #ffffff;
-    background: var(--main-color);
-    text-shadow: var(--text-shadow-color);
-    box-shadow: var(--box-shadow-color);
 }
 
 .portfolio__card:hover .portfolio__title,

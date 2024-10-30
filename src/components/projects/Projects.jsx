@@ -1,8 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import Filter from "./Filter";
 import "./Projects.css";
-import { AiOutlineGithub } from "react-icons/ai";
-import { LiaExternalLinkAltSolid } from "react-icons/lia";
+import { VscGithubAlt } from "react-icons/vsc";
+
+
+import { AiOutlineFileSearch } from "react-icons/ai";
+import { PiFigmaLogoLight } from "react-icons/pi";
+
 import { motion } from "framer-motion";
 import { FaArrowUp } from "react-icons/fa"; // Import the "up arrow" icon
 
@@ -96,12 +100,14 @@ const Projects = () => {
                                 </div>
                                 <div className="portfolio__buttons">
                                     <a href={urlfigma} target="_blank" rel="noreferrer" className="portfolio__button">
-                                        <LiaExternalLinkAltSolid />
+                                        <PiFigmaLogoLight />
                                     </a>
                                     <a href={urlgithub} target="_blank" rel="noreferrer" className="portfolio__github-button">
-                                        <AiOutlineGithub />
+                                        <VscGithubAlt />
                                     </a>
-                                    <a href={urlstudy} target="_blank" rel="noreferrer" className="portfolio__vs-button">View Study</a>
+                                    <a href={urlstudy} target="_blank" rel="noreferrer" className="portfolio__vs-button">
+                                    <AiOutlineFileSearch />
+                                    </a>
                                 </div>
                             </div>
                         </motion.div>
