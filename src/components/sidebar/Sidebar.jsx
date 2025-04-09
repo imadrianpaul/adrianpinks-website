@@ -4,8 +4,9 @@ import "./Sidebar.css";
 import { VscHome, VscChecklist, VscMail } from "react-icons/vsc";
 import { BiUser, BiMenu } from "react-icons/bi";
 import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
+import { LuSquareStack } from "react-icons/lu";
 
-// Import your images
+
 import Logo1 from "../../assets/logo1.jpg";
 import Logo2 from "../../assets/logo2.svg";
 import Logo3 from "../../assets/logo3.svg";
@@ -62,6 +63,12 @@ const Sidebar = (props) => {
                                 {/* Use Link for portfolio with the hash for the portfolio section */}
                                 <Link to="/#portfolio" className="nav__link">
                                     <VscChecklist />
+                                </Link>
+                            </li>
+                            <li className="nav__item">
+                                {/* Use Link for portfolio with the hash for the portfolio section */}
+                                <Link to="/#timeline" className="nav__link">
+                                    <LuSquareStack />
                                 </Link>
                             </li>
                             <li className="nav__item">

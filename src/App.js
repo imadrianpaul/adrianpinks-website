@@ -4,11 +4,12 @@ import Sidebar from './components/sidebar/Sidebar';
 import Home from './components/home/Home';
 import About from './components/about/About';
 import Projects from './components/projects/Projects';
+import Timeline from './components/timeline/Timeline';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import { useLocalStorage } from 'usehooks-ts';
-import gradientBgLight from './assets/gradientbg-light.jpg'; // Image for light theme
-import gradientBgDark from './assets/gradientbg-dark.jpg';  // Image for dark theme
+import gradientBgLight from './assets/gradientbg-light.jpg';
+import gradientBgDark from './assets/gradientbg-dark.jpg';
 
 function App() {
   const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -38,6 +39,7 @@ function App() {
                 <div className="main__background">
                   <About />
                   <Projects />
+                  <Timeline />
                   <Contact />
                   <Footer />
                 </div>

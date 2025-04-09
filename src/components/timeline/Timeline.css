@@ -1,0 +1,121 @@
+.timeline__container {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline__container::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--main-color);
+    top: 0;
+    bottom: 0;
+    left: 20%;
+    margin-left: -2px;
+}
+
+.timeline__item {
+    position: relative;
+    width: 80%;
+    padding: 0 0 2rem 2.5rem;
+}
+
+.timeline__item.left {
+    left: 0;
+}
+
+.timeline__item.right {
+    left: 20%;
+}
+
+.timeline__content {
+    position: relative;
+    padding: 1.5rem;
+    background: var(--container-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timeline__content::before {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--container-color);
+    border: 4px solid var(--first-color);
+}
+
+.timeline__item.left .timeline__content::before {
+    right: -10px;
+}
+
+.timeline__item.right .timeline__content::before {
+    left: -10px;
+}
+
+.timeline__icon {
+    position: absolute;
+    top: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--first-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.timeline__date {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--first-color-lighten);
+    color: var(--first-color);
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.timeline__title {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    color: var(--title-color);
+}
+
+.timeline__company {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: var(--first-color);
+    font-weight: 500;
+}
+
+.timeline__text {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline__container::after {
+        left: 31px;
+    }
+    
+    .timeline__item {
+        width: 100%;
+        padding-left: 5rem;
+        padding-right: 1rem;
+    }
+    
+    .timeline__item.right {
+        left: 0;
+    }
+    
+    .timeline__content::before {
+        left: -10px !important;
+    }
+}
