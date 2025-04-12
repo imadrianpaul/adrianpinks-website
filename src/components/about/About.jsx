@@ -7,12 +7,14 @@ import figmaImage from '../../assets/figmaImage.jpg';
 
 import { ReactComponent as CSharp } from '../../assets/csharp.svg';
 import { ReactComponent as CSS } from '../../assets/css.svg';
+import { ReactComponent as Tailwind } from '../../assets/TailwindDark.svg';
 import { ReactComponent as HTML } from '../../assets/HTML.svg';
 import { ReactComponent as PHPDark } from '../../assets/PHPDark.svg';
 import { ReactComponent as JavaScript } from '../../assets/JavaScript.svg';
 import { ReactComponent as ReactDark } from '../../assets/ReactDark.svg';
 import { ReactComponent as Laravel } from '../../assets/LaravelDark.svg';
 import { ReactComponent as NodeJS } from '../../assets/NodeJS.svg';
+import { ReactComponent as Svelte } from '../../assets/Svelte.svg';
 
 import { ReactComponent as Figma } from '../../assets/Figma.svg';
 import { ReactComponent as Git } from '../../assets/Git.svg';
@@ -53,14 +55,13 @@ const About = () => {
                     <div className="about__info">
                         <div className="section__title">About Me</div>
                         <p className="about__description">
-                            Hello! I'm Adrian, a UI/UX Designer and Front-end Web Developer living in Philippines, Cavite Province. I studied at Adamson University, earned Bachelor's Degree and received the 
+                            Hello! I'm Adrian, a Fullstack Developer living in Philippines, Cavite Province. I studied at Adamson University, earned Bachelor's Degree and received the 
                             diploma in Information Technology. <br/><br/>
-                            I've always been fascinated by the world of designing. I want to see my creative ideas transform from vision to reality.
-                            Also, I like lines.<br/><br/>
+                            I love the connection between creativity and technology, where you can turn ideas into a real thing. Whether through coding or design, I enjoy developing solutions that are both functional and visually compelling.<br/><br/>
                         </p>
                         <ul className="about__list">    
                         </ul>
-                        <button className="btn" onClick={downloadResume}>Download CV</button>
+                        {/* <button className="btn" onClick={downloadResume}>Download CV</button> */}
                     </div>
                 </div>
 
@@ -72,8 +73,10 @@ const About = () => {
                                 {[
                                     { Component: HTML, delay: 0 },
                                     { Component: CSS, delay: 0.3 },
+                                    { Component: Tailwind, delay: 0.3 },
                                     { Component: JavaScript, delay: 0.3 },
                                     { Component: ReactDark, delay: 0.3 },
+                                    { Component: Svelte, delay: 0.3 },
                                     { Component: NodeJS, delay: 0.3 },
                                     { Component: PHPDark, delay: 0.3 },
                                     { Component: Laravel, delay: 0.3 },

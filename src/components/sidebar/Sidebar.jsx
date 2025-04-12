@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";  // Import Link and useLocation from react-router-dom
+import { Link, useLocation } from "react-router-dom";
 import "./Sidebar.css";
 import { VscHome, VscChecklist, VscMail } from "react-icons/vsc";
 import { BiUser, BiMenu } from "react-icons/bi";
 import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
+import { LuSquareStack } from "react-icons/lu";
 
-// Import your images
+
 import Logo1 from "../../assets/logo1.jpg";
 import Logo2 from "../../assets/logo2.svg";
 import Logo3 from "../../assets/logo3.svg";
@@ -14,18 +15,15 @@ import Logo4 from "../../assets/logo4.svg";
 const Sidebar = (props) => {
     const [toggle, showMenu] = useState(false);
     const [currentLogo, setCurrentLogo] = useState(Logo1);
-    const location = useLocation(); // To track URL changes
+    const location = useLocation();
 
-    // List of logo images
     const logos = [Logo1, Logo2, Logo3, Logo4];
 
-    // Function to randomly change the logo
     const changeLogo = () => {
         const randomIndex = Math.floor(Math.random() * logos.length);
         setCurrentLogo(logos[randomIndex]);
     };
 
-    // Scroll to the section when location changes (when hash is updated)
     useEffect(() => {
         if (location.hash) {
             const element = document.getElementById(location.hash.replace('#', ''));
@@ -62,6 +60,12 @@ const Sidebar = (props) => {
                                 {/* Use Link for portfolio with the hash for the portfolio section */}
                                 <Link to="/#portfolio" className="nav__link">
                                     <VscChecklist />
+                                </Link>
+                            </li>
+                            <li className="nav__item">
+                                {/* Use Link for portfolio with the hash for the portfolio section */}
+                                <Link to="/#timeline" className="nav__link">
+                                    <LuSquareStack />
                                 </Link>
                             </li>
                             <li className="nav__item">

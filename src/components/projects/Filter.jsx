@@ -61,7 +61,13 @@ const Filter = [
         urlgithub: "https://github.com/imadrianpaul",
         urlstudy: capstoneProj,
         description: " The system helps IT technicians track hardware statuses in real-time, detect issues early, and manage network resources through a visual mapping feature. It reduces their workload and ensures optimal computer performance."
-    }
+    },
+    {
+        id: 7,
+        image: null,
+        category: [],
+        description: "More projects coming soon...",
+    },
 
     
 ];

@@ -4,20 +4,24 @@ import "./Projects.css";
 import { GrGithub } from "react-icons/gr";
 import { PiNoteDuotone } from "react-icons/pi";
 import { PiFigmaLogoLight } from "react-icons/pi";
+import { BsHourglassSplit } from "react-icons/bs";
 
 import { motion } from "framer-motion";
-import { FaArrowUp } from "react-icons/fa"; // Import the "up arrow" icon
+import { FaArrowUp } from "react-icons/fa"; 
 
 const Projects = () => {
     const [items, setItems] = useState(Filter);
     const [activeFilter, setActiveFilter] = useState(0);
-    const [showScroll, setShowScroll] = useState(false); // State to track scroll visibility
+    const [showScroll, setShowScroll] = useState(false);
 
-    const projectsRef = useRef(null); // Ref to scroll back to the projects section
+    const projectsRef = useRef(null);
 
-    // Function to filter projects
     const filterItems = (categoryItem) => {
         const updatedItems = Filter.filter((curElem) => {
+            if (!curElem.category) {
+                return false;
+            }
+            
             if (Array.isArray(categoryItem)) {
                 return categoryItem.some(category => curElem.category.includes(category));
             }
@@ -26,12 +30,10 @@ const Projects = () => {
         setItems(updatedItems);
     };
 
-    // Function to scroll back to the Projects section
     const scrollToProjects = () => {
         projectsRef.current.scrollIntoView({ behavior: "smooth" });
     };
 
-    // Function to handle scroll visibility of the "Back to Top" button
     const checkScrollTop = () => {
         const projectsSection = projectsRef.current;
         const rect = projectsSection.getBoundingClientRect();
@@ -73,6 +75,25 @@ const Projects = () => {
                 {items.map((elem) => {
                     const { id, image, title, category, description, urlfigma, urlgithub, urlstudy } = elem;
 
+                    if (!image) {
+                        return (
+                            <motion.div
+                                animate={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, x: -100 }}
+                                exit={{ opacity: 0, x: 200 }}
+                                transition={{ duration: 0.5, ease: "easeInOut" }}
+                                className="portfolio__coming__soon"
+                                key={id}>
+                                <div className="portfolio__card coming-soon-card">
+                                    <div className="coming-soon-content">
+                                        <BsHourglassSplit className="coming-soon-icon" />
+                                        <h3 className="coming-soon-text">More projects coming soon...</h3>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        );
+                    }
+
                     return (
                         <motion.div
                             animate={{ opacity: 1, x: 0 }}
@@ -92,24 +113,26 @@ const Projects = () => {
                                     <p>{description}</p>
                                 </div>
                                 <div className="portfolio__category-container">
-                                    {category.map((cat, index) => (
+                                    {category && category.map((cat, index) => (
                                         <span key={index} className="portfolio__category">{cat}</span>
                                     ))}
                                 </div>
                                 <div className="portfolio__buttons">
-                                    {category.includes("design") && (
+                                    {category && category.includes("design") && (
                                             <a href={urlfigma} target="_blank" rel="noreferrer" className="portfolio__button">
                                                 <PiFigmaLogoLight />
                                             </a>
                                         )}
-                                    {["frontend", "backend", "development"].some(devCat => category.includes(devCat)) && (
+                                    {category && ["frontend", "backend", "development"].some(devCat => category.includes(devCat)) && (
                                         <a href={urlgithub} target="_blank" rel="noreferrer" className="portfolio__github-button">
                                             <GrGithub />
                                         </a>
                                     )}
-                                    <a href={urlstudy} target="_blank" rel="noreferrer" className="portfolio__vs-button ">
-                                    View Study 
-                                    </a>
+                                    {urlstudy && (
+                                        <a href={urlstudy} target="_blank" rel="noreferrer" className="portfolio__vs-button">
+                                            View Study 
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </motion.div>

@@ -23,16 +23,16 @@
 }
 
 .nav_logo img {
-    border: 1px solid var(--main-color); /* Adds a border to the image */
-    border-radius: 10px; /* Optional: Makes the image circular */
-    width: 80px; /* Set the desired width */
-    height: 45px; /* Set the desired height */
-    object-fit: cover; /* Ensures the image maintains aspect ratio */
-    transition: 0.3s; /* Optional: Adds a smooth transition */
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    width: 80px;
+    height: 45px;
+    object-fit: cover;
+    transition: 0.3s;
 }
 
 .nav_logo img:hover {
-    border-color: var(--title-color); /* Changes border color on hover */
+    border-color: var(--title-color);
     transform: scale(1.2);
     
 }
@@ -46,7 +46,7 @@
 
 .nav__link:hover {
     color: var(--main-color);
-    transform: scale(1.2); /* Should enlarge when hovering */
+    transform: scale(1.2);
 }
 
 .nav__item {
@@ -81,7 +81,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 999;
     transition: 0.3s ease;
     font-size: 1rem;
 }
@@ -95,7 +95,7 @@
     color: var(--title-color);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
     .aside {
         left: -110px;
     }
