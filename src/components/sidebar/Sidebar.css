@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    z-index: 11;
+    z-index: 1000;
     transition: 0.3s;
 }
 
