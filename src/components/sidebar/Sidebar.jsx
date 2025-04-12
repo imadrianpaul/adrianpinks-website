@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";  // Import Link and useLocation from react-router-dom
+import { Link, useLocation } from "react-router-dom";
 import "./Sidebar.css";
 import { VscHome, VscChecklist, VscMail } from "react-icons/vsc";
 import { BiUser, BiMenu } from "react-icons/bi";
@@ -15,18 +15,15 @@ import Logo4 from "../../assets/logo4.svg";
 const Sidebar = (props) => {
     const [toggle, showMenu] = useState(false);
     const [currentLogo, setCurrentLogo] = useState(Logo1);
-    const location = useLocation(); // To track URL changes
+    const location = useLocation();
 
-    // List of logo images
     const logos = [Logo1, Logo2, Logo3, Logo4];
 
-    // Function to randomly change the logo
     const changeLogo = () => {
         const randomIndex = Math.floor(Math.random() * logos.length);
         setCurrentLogo(logos[randomIndex]);
     };
 
-    // Scroll to the section when location changes (when hash is updated)
     useEffect(() => {
         if (location.hash) {
             const element = document.getElementById(location.hash.replace('#', ''));

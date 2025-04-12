@@ -16,9 +16,12 @@ const Projects = () => {
 
     const projectsRef = useRef(null);
 
-    // Function to filter projects
     const filterItems = (categoryItem) => {
         const updatedItems = Filter.filter((curElem) => {
+            if (!curElem.category) {
+                return false;
+            }
+            
             if (Array.isArray(categoryItem)) {
                 return categoryItem.some(category => curElem.category.includes(category));
             }

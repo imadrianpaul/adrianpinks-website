@@ -65,6 +65,7 @@ const Filter = [
     {
         id: 7,
         image: null,
+        category: [],
         description: "More projects coming soon...",
     },
 
